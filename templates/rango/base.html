@@ -68,10 +68,27 @@
 
 
         </div>
+<<<<<<< HEAD
         <div class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 main">
          {% block body_block %}{% endblock %}
 
 
+=======
+        <hr />
+        <div>
+            <ul>
+               {% if user.is_authenticated %}
+                    <li><a href="{% url 'restricted' %}">Restricted Page</a></li>
+                    <li><a href="{% url 'auth_logout' %}?next=/rango/">Logout</a></li>
+                    <li><a href="{% url 'add_category' %}">Add a New Category</a></li>
+               {% else %}
+                    <li><a href="{% url 'auth_login' %}">Log in</a></li>
+                    <li><a href="{% url 'registration_register' %}">Sign Up</a></li>
+               {% endif %}
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'index' %}">Index</a></li>
+            </ul>
+>>>>>>> 9df40a0d4d982af8dffc9483ba8908b2d1148172
         </div>
       </div>
     </div>
